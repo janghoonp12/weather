@@ -1,5 +1,7 @@
 <template>
-  <div>
+  <div class="color">
+    <br>
+    <h1>보고싶은 영화</h1>
     <input type="text" v-model.trim="InputText" @keyup.enter="PushMovies">
     <input type="submit" @click.enter="PushMovies" value='Add'>
     <br>
@@ -32,5 +34,7 @@ export default {
 </script>
 
 <style>
-
+  .color {
+    background-color: rgb(215, 236, 246);
+  }
 </style>

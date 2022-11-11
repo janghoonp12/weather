@@ -1,10 +1,10 @@
 <template>
   <div>
     <h1>{{weather.weather[0].description}}한 날씨엔 이런 영화 어때요?</h1>
-    <input type="submit" value="클릭!" @click="GetUrl">
-    <br>
-    <br>
     <div class="row">
+      <div class="col-4"></div>
+      <input class="col-4 btncolor" type="submit" value="PICK" @click="GetUrl">
+      <div class="col-4"></div>
       <div class="col-4"></div>
     <div class="col-4 card mb-3" v-if="check">
       <img :src="movieUrl" class="card-img-top" alt="...">
@@ -111,5 +111,10 @@ export default {
 </script>
 
 <style>
-
+  .btncolor {
+    color: white;
+    background-color: rgb(35, 127, 40);
+    border: 0;
+    border-radius: 5px;
+  }
 </style>

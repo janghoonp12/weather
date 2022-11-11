@@ -1,11 +1,18 @@
 <template>
   <div id="app">
-    <nav>
-      <!-- <router-link @click.native="GetMovies" :to="{ name: 'name'}">Movies</router-link> | -->
-      <router-link :to="{name: 'movies'}">Movies</router-link> |
-      <router-link to="/random">Random</router-link> |
-      <router-link to="/watch-list">WatchList</router-link>
+    <nav class="d-flex justify-content-end">
+      <span>
+        <router-link :to="{name: 'movies'}">Movies</router-link>
+      </span>
+      <span>
+        <router-link to="/random">Random</router-link>
+      </span>
+      <span>
+        <router-link to="/watch-list">WatchList</router-link>
+      </span>
     </nav>
+    <br>
+    <br>
     <router-view/>
   </div>
 </template>
@@ -21,7 +28,9 @@
 }
 
 nav {
+  /* float: right; */
   padding: 30px;
+  background-color: rgb(215, 236, 246);
 }
 
 nav a {
@@ -31,6 +40,10 @@ nav a {
 
 nav a.router-link-exact-active {
   color: #42b983;
+}
+
+span {
+ margin-left: 20px;
 }
 </style>
 <script>

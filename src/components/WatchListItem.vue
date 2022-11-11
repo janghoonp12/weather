@@ -1,7 +1,7 @@
 <template>
   <!-- <div> -->
-    <div @click="CheckMovie">
-    <p :class="{ 'is-completed': movie.isselected }">{{movie.title}}</p>
+    <div @click="CheckMovie" :class="{ 'is-selected': movie.isselected }">
+    {{movie.title}}
     </div>
   <!-- </div> -->
 </template>
@@ -22,6 +22,10 @@ export default {
 
 <style>
   .is-completed {
-    text-decoration: 2px line-through #42b983;
+    text-decoration: 2px line-through gray;
+  }
+  .is-selected {
+    background-color: rgb(224, 224, 224);
+    text-decoration: 2px line-through gray;
   }
 </style>
