@@ -24,7 +24,7 @@ export default {
   name: 'WeatherView',
   data() {
     return {
-      appid: 'ab9306ccf50c90c636e9d5c0076b08ab',
+      appid: '#',
       weather: null,
       weatherid: null,
       movie: null,
